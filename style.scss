@@ -31,15 +31,19 @@ button {
    cursor: pointer;
 }
 .nav_header {
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
-   width: 100%;
-   height: 83px;
-   background-color: $black-bg;
-   text-transform: uppercase;
-   font-size: 14px;
-   font-family: $font-heading;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 100%;
+  height: 83px;
+  background-color: $black-bg;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-family: $font-heading;
+  @media screen and (max-width: 575px) {
+  height: 10px;
+  padding: 23px 18px 24px 18px;
+  }
    & button {
       width: 161px;
       height: 37px;
@@ -54,6 +58,9 @@ button {
 }
 .nav_header--logo {
    margin-left: 76px;
+   @media screen and (max-width: 575px) {
+    margin-left: 0px;
+    }
    & span {
       color: $main-color;
    }
@@ -78,6 +85,10 @@ button {
 }
 .nav_header--tel {
    color: $main-color;
+   @media screen and (max-width: 575px) {
+    color: #FFF;
+    text-decoration: none;
+    }
    }
 .left_instagram {
    display: flex;
@@ -110,6 +121,9 @@ button {
    height: 100%;
    background: url("./assets/img/head.png") no-repeat;
    background-size: cover;
+   @media screen and (max-width: 575px) {
+    
+  }
 }
 .header--text {
    width: 515px;
@@ -117,10 +131,16 @@ button {
    margin-left: 60px;
    margin-top: 195px;
    color: #fff;
+   @media screen and (max-width: 575px) {
+    width: 340px;
+  }
    & h1 {
       font-size: 40px;
       font-family: $font-heading;
       font-weight: normal;
+      @media screen and (max-width: 575px) {
+        font-size: 23px;
+      }
       & span {
          color: $main-color;
       }
@@ -128,6 +148,9 @@ button {
    & p {
       font-family: $font-content;
       font-size: 22px;
+      @media screen and (max-width: 575px) {
+        font-size: 18px;
+      }
    }
 }
 .header_btns {
@@ -141,6 +164,10 @@ button {
       font-family: $font-content;
       text-transform: uppercase;
       border-radius: 3px;
+      @media screen and (max-width: 575px) {
+        width: 120%;
+        margin-top: 30px;        
+      }
       &:first-child {
          background-color: $main-color;
          border: 0;
@@ -150,6 +177,9 @@ button {
          background-repeat:no-repeat;
          border: 1px solid white;
          margin-left: 20px;
+         @media screen and (max-width: 575px) {
+          margin-left: 0px;
+        }
       }
    }
 }
@@ -188,6 +218,12 @@ main {
    position: relative;
    height: 1080px;
    width: 100%;
+   @media screen and (max-width: 575px) {
+    height: 690px;
+  }
+}
+.night_town {
+  flex-wrap: wrap;
 }
 .night_town--nav {
    display: flex;
@@ -241,13 +277,29 @@ main {
         width: 92px;
         height: 2px;
         background-color: $main-color;
+        @media screen and (max-width: 575px) {
+          display: none;
+        }
+      }
+      @media screen and (max-width: 575px) {
+        text-align: center;
+        font-size: 22px;
+        margin: 30px auto;
       }
    }
    & p {
       color: white;
       font-family: $font-content;
       font-size: 18px;
+      @media screen and (max-width: 575px) {
+        font-size: 15px;
+        text-align: center;
+      }
    }
+  @media screen and (max-width: 575px) {
+    margin: 0 auto;
+    height: 200px;
+  }
 }
 .text_four_blocks{
    display: grid;
@@ -265,6 +317,9 @@ main {
       font-size: 15px;
       font-family: $font-content;
    }
+   @media screen and (max-width: 575px) {
+    display: none;
+  }
 }
 .night_town {
    display: flex;
@@ -273,7 +328,12 @@ main {
    display: flex;
    position: relative;
       & img {
-         margin-left: 37px;
+        margin-left: 37px;
+        @media screen and (max-width: 575px) {
+          margin-right: 37px; 
+          width: 100%;
+          margin-top: 20px;
+        }
       }
       & button {
          position: absolute;
@@ -287,12 +347,29 @@ main {
          border-radius: 50px;
          right: 0px;
          top: 208px;
+         &:last-child {
+          transform: rotate(180deg);
+          left: 20px;
+          top: 160px;
+        }
+         @media screen and (max-width: 575px) {
+          right: 20px;
+          top: 160px;
+        }
       }
 }
 .white_bg {
    background-color: $white-bg;
    height: 2575px;
    width: 100%;
+   & iframe {
+    @media screen and (max-width: 575px) {
+    width: 100%;
+    }
+  }
+  @media screen and (max-width: 575px) {
+    height: 3500px;
+  }
 }
 .online_control {
     display: flex;
@@ -306,7 +383,18 @@ main {
    & img {
     margin-top: 60px;
     margin-bottom: 30px;
-   }   
+   }
+
+   & iframe {
+     @media screen and (max-width: 575px) {
+       width: 480px;
+     }
+   }
+   @media screen and (max-width: 575px) {
+    position: static;
+    background-color: $black-bg;
+    height: 1075px;
+  }   
 }
 .online_control--logo {
    & h3 {
@@ -327,12 +415,22 @@ main {
     font-size: 20px;
     text-align: center;
     max-width: 680px;
+    @media screen and (max-width: 575px) {
+      font-size: 18px;
+      max-width: 480px;
+      color: #FFF;
+    }
   }
 }
 .online_control--submit {
    margin-top: 90px;
-   height: 102px;
    max-width: 770px;
+   @media screen and (max-width: 575px) {
+    font-size: 18px;
+    max-width: 480px;
+    margin-top: 0px;
+    background-color: $black-bg;
+  }
    & button {
     width: 200px;
     height: 51px;
@@ -341,6 +439,12 @@ main {
     border-radius: 3px;
     border: 0;
     text-transform: uppercase;
+    @media screen and (max-width: 575px) {
+      position: relative;
+      width: 100%;
+      margin-top: 50px;
+      bottom: -25px;
+    }
    }
    & form {
     display: flex;
@@ -355,6 +459,11 @@ main {
     font-size: 15px;
     line-height: 20px;
     color: rgba(54, 54, 54, 0.5);
+    @media screen and (max-width: 575px) {
+      width: 100%;
+      color: rgba(255, 255, 255, 0.5);
+      margin-top: 30px;
+    }
    }
    & input {
     border: none;
@@ -363,6 +472,11 @@ main {
     outline: none;
     margin-top: 5px;
     color: black;
+    @media screen and (max-width: 575px) {
+      width: 100%;
+      color: #FFF;
+      background-color: $black-bg;
+    }
   }
 }
 .types_repair {
@@ -371,6 +485,9 @@ main {
   height: 706px;
   max-width: 100%;
   top: -250px;
+  @media screen and (max-width: 575px) {
+    top: 100px;
+  }
 }
 .types_repair--logo,
 .design_project--logo {
@@ -400,6 +517,10 @@ main {
   height: 608px;
   max-width: 1236px;
   margin: 10px auto;
+  @media screen and (max-width: 575px) {
+    flex-direction: column;
+    align-items: center;
+  }
   & h4 {
     margin: 15px 20px;
     font-family: $font-heading;
@@ -571,7 +692,6 @@ main {
       color: rgba(255, 255, 255, 0.5);
       display: block;
       font-size: 15px;
-      
     }
     & input {
       border: none;
@@ -636,6 +756,42 @@ main {
 }
 .realize_fantasies {
   width: 100%;
+  & div {
+    width: 470px;
+    margin: 0 auto;
+    & img {
+    @media screen and (max-width: 575px) {
+      width: 100%;
+      }
+    }
+    & button {
+    @media screen and (max-width: 575px) {
+      position: relative;
+      color: #fff;
+      background: url("assets/img/Play.png") no-repeat;
+      background-position-x: -45px;
+      background-position-y: -43px;
+      width: 50px;
+      height: 50px;
+      border: 0;
+      border-radius: 50px;
+      right: -440px;
+      top: -170px;
+    &:last-child {
+      transform: rotate(180deg);
+      left: -75px;
+      top: -171px;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 575px) {
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(to top, #131313 0%, #131313 200px, #FFF 200px, #fff 100%);
+  }
 }
 .realize_fantasies--bg {
   display: flex;
@@ -644,6 +800,11 @@ main {
   background-repeat: no-repeat, no-repeat;
   background-blend-mode: multiply;
   padding: 0px 100px;
+  @media screen and (max-width: 575px) {
+    height: 150px;
+    background-image: none;
+    padding: 0px;
+  }
 }
 .realize_fantasies--text {
   padding: 120px 0px;
@@ -658,6 +819,13 @@ main {
     line-height: 37px;
     text-transform: uppercase;
     color: $main-color;
+    @media screen and (max-width: 575px) {
+      text-align: center;
+    }
+  }
+  @media screen and (max-width: 575px) {
+    padding: 0px;
+    height: 530px;
   }
 }
 .realize_fantasies--list {
@@ -715,6 +883,23 @@ main {
     margin: 0 auto 40px;
     color:#363636;
     font-family: $font-content;
+    @media screen and (max-width: 575px) {
+      max-width: 500px;
+      font-size: 16px;
+      color: #FFF;
+    }
+  }
+  @media screen and (max-width: 575px) {
+    background: $black-bg;
+    padding-top: 20px;
+    height: 2300px;
+  }
+}
+.design_project--logo {
+  & h3 {
+    @media screen and (max-width: 575px) {
+      color: #FFF;
+    }
   }
 }
 .steps_to_goal {
@@ -829,6 +1014,9 @@ main {
   padding-top: 100px;
   background: linear-gradient(to bottom, #131313 0%, #131313 550px, #fff 400px, #fff 100%);
   text-align: center;
+  @media screen and (max-width: 575px) {
+    background: $black-bg;
+  }
 }
 .our_team--logo {
   margin: 0px auto;
@@ -880,6 +1068,9 @@ main {
     font-size: 13px;
     text-transform: uppercase;
   }
+  @media screen and (max-width: 575px) {
+    flex-direction: column;
+  }
 }
 .our_team--text {
   margin: 0px auto;
@@ -889,6 +1080,9 @@ main {
   width: 85%;
   top: -90px;
   padding-top: 10px;
+  @media screen and (max-width: 575px) {
+    width: 45%;
+  }
 }
 .our_team--about {
   width: 558px;
@@ -1003,6 +1197,9 @@ main {
   background-repeat: no-repeat, no-repeat;
   background-position: 0 255px, 0 255px;
   background-blend-mode: multiply;
+  @media screen and (max-width: 575px) {
+    background: $black-bg;
+  }
 }
 .questions {
   display: flex;
@@ -1010,6 +1207,10 @@ main {
   width: 883px;
   height: 445.32px;
   background: $black-bg;
+  @media screen and (max-width: 575px) {
+    width: 100%;
+    padding: 10px;
+  }
 }
 .questions--title {
   font-family: $font-heading;
@@ -1048,6 +1249,9 @@ main {
   border: none;
   border-radius: 3px;
   margin: 0 auto;
+  @media screen and (max-width: 575px) {
+    width: 100%;
+  }
 }
 .form--layout {
   font-family: $font-content;
@@ -1076,15 +1280,16 @@ main {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding-top: 45px; 
+  padding-top: 45px;
+  @media screen and (max-width: 575px) {
+    flex-direction: column-reverse;
+  } 
 }
 .location {
   position: relative;
   width: 100%;
-  height: 255px;
   margin: 0 auto 42px;
   filter: grayscale(100%);
-  width: 925px;
   height: 465px;
   margin-bottom: 0;
   order: 3;
@@ -1108,6 +1313,14 @@ main {
   margin-bottom: 24px; 
   width: 650px;
   text-align: center;
+  & a {
+    @media screen and (max-width: 575px) {
+      text-decoration: none;
+    }
+  }
+  @media screen and (max-width: 575px) {
+    width: 100%;
+  }
 }
 .map--links {
   display: flex;
@@ -1143,5 +1356,15 @@ footer {
   @extend %content;
   & .nav_header {
     height: 133px;
+  }
+}
+@media screen and (max-width: 575px) {
+  .mobile_hidden {
+    display: none;
+  }
+}
+@media screen and (min-width: 600px) {
+  .desktop_hidden {
+    display: none;
   }
 }
