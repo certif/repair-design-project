@@ -1002,12 +1002,14 @@ button {
   width: 100%;
 }
 
-.realize_fantasies div {
-  width: 470px;
-  margin: 0 auto;
+@media screen and (max-width: 575px) {
+  .realize_fantasies div {
+    width: 470px;
+    margin: 0 auto;
+  }
 }
 
-@media screen and (max-width: 575px) {
+@media screen and (max-width: 575px) and (max-width: 575px) {
   .realize_fantasies div img {
     width: 100%;
   }

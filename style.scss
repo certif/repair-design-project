@@ -757,13 +757,15 @@ main {
 .realize_fantasies {
   width: 100%;
   & div {
+    @media screen and (max-width: 575px) {
     width: 470px;
     margin: 0 auto;
     & img {
-    @media screen and (max-width: 575px) {
-      width: 100%;
+       @media screen and (max-width: 575px) {
+       width: 100%;
       }
     }
+  }
     & button {
     @media screen and (max-width: 575px) {
       position: relative;
