@@ -285,11 +285,6 @@ button {
   }
 }
 
-.night_town {
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-
 .night_town--nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -394,6 +389,12 @@ button {
   }
 }
 
+.completed_proj--toggles {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .text_four_blocks {
   display: -ms-grid;
   display: grid;
@@ -427,6 +428,13 @@ button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+@media screen and (max-width: 575px) {
+  .night_town {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
 }
 
 .night_town--slider {
@@ -846,6 +854,12 @@ button {
   left: 445px;
 }
 
+@media screen and (max-width: 1200px) {
+  .carousel--item {
+    display: none;
+  }
+}
+
 .measurer_form_save {
   margin-top: 100px;
   max-width: 506px;
@@ -1103,6 +1117,12 @@ button {
   }
 }
 
+@media screen and (max-width: 1500px) {
+  .realize_fantasies--text {
+    padding: 50px 0px;
+  }
+}
+
 .realize_fantasies--list {
   font-family: "FuturaBook", Arial, sans-serif;
   list-style: none;
@@ -1122,6 +1142,12 @@ button {
 .realize_fantasies--item:hover {
   color: #E3B873;
   text-decoration: underline;
+}
+
+@media screen and (max-width: 1200px) {
+  .realize_fantasies--item {
+    margin-bottom: 10px;
+  }
 }
 
 .realize_fantasies--images {
@@ -1271,12 +1297,74 @@ button {
   width: 10px;
   height: 10px;
   margin: 0;
-  margin-right: 0px;
   margin-right: 18px;
   padding: 0;
   background-color: #fff;
   border: none;
   border-radius: 50%;
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.toggle-active {
+  opacity: 1;
+}
+
+.toggle_arrow-prev {
+  margin-right: 30px;
+}
+
+.toggle_arrow-prev::after {
+  top: -3px;
+  left: -2px;
+}
+
+.toggle_arrow-prev::before {
+  top: 3px;
+  left: -2px;
+}
+
+.toggle_arrow-next {
+  margin-left: 12px;
+}
+
+.toggle_arrow-next::after {
+  top: 3px;
+}
+
+.toggle_arrow-next::before {
+  top: -3px;
+}
+
+.toggle_arrow {
+  position: relative;
+  width: 40px;
+  height: 1px;
+  background-color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.toggle_arrow::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  width: 10px;
+  height: 2px;
+  background-color: #fff;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.toggle_arrow::before {
+  content: '';
+  position: absolute;
+  right: 0;
+  width: 10px;
+  height: 2px;
+  background-color: #fff;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
 
 .steps_to_goal-right {
@@ -1821,7 +1909,7 @@ footer .nav_header {
   }
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 576px) {
   .desktop_hidden {
     display: none;
   }
